@@ -13,33 +13,33 @@
 
 @using (Html.BeginForm("Listar", "Funcionario", FormMethod.Post))
 {
-    <fieldset>
-        <ledend>Dados do Funcionário</ledend>
-        <div>
-            <label form="funcId">Código: </label>
-        </div>
-        <div>
-            <input type="number" value="@Model.FuncId" name="FuncId" />
-        </div>
-        <br />
+<fieldset>
+    <ledend>Dados do Funcionário</ledend>
+    <div>
+        <label form="funcId">Código: </label>
+    </div>
+    <div>
+        <input type="number" value="@Model.FuncId" name="FuncId" />
+    </div>
+    <br />
 
-        <div>
-            <label form="funcNome">Nome: </label>
-        </div>
-        <div>
-            <input type="text" value="@Model.FuncNome" name="FuncNome" />
-        </div>
-        <br />
+    <div>
+        <label form="funcNome">Nome: </label>
+    </div>
+    <div>
+        <input type="text" value="@Model.FuncNome" name="FuncNome" />
+    </div>
+    <br />
 
-        <div>
-            <label form="funcFuncao">Função: </label>
-        </div>
-        <div>
-            <input type="text" value="@Model.FuncFuncao" name="FuncFuncao" />
-        </div>
-        <br />
-        @*<input type="submit" value="Enviar" />*@
-        @Html.EditorFor(x => x.FuncId)
-    </fieldset>
+    <div>
+        <label form="funcFuncao">Função: </label>
+    </div>
+    <div>
+        <input type="text" value="@Model.FuncFuncao" name="FuncFuncao" />
+    </div>
+    <br />
+    <input type="submit" value="Enviar" />
+    @*@Html.EditorFor(x => x.FuncId)*@
+</fieldset>
 }
 @*</form>*@

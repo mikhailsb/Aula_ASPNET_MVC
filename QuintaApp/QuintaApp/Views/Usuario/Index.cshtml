@@ -1,0 +1,28 @@
+﻿@model QuintaApp.Models.Usuario
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Resultado", "Usuario", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Dados de Usuário</legend>
+        <div>
+            @Html.Label("IdUsuario:")
+        </div>
+        <div>
+            @Html.TextBox("txtIdUsuario","")
+        </div>
+        <br />
+
+        <div>
+            @Html.Label("Nome:")
+        </div>
+        <div>
+            @Html.TextBox("txtNome", "")
+        </div>
+    </fieldset>
+}
