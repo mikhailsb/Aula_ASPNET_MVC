@@ -4,25 +4,80 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Usuário</h2>
 
 @using (Html.BeginForm("Resultado", "Usuario", FormMethod.Post))
 {
-    <fieldset>
-        <legend>Dados de Usuário</legend>
-        <div>
-            @Html.Label("IdUsuario:")
-        </div>
-        <div>
-            @Html.TextBox("txtIdUsuario","")
-        </div>
-        <br />
+<fieldset>
+    <legend>Dados de Usuário</legend>
 
-        <div>
-            @Html.Label("Nome:")
-        </div>
-        <div>
-            @Html.TextBox("txtNome", "")
-        </div>
-    </fieldset>
+    <div>
+        <label form="UsuId">Código: </label>
+    </div>
+    <div>
+        <input type="number" value="" name="UsuId" />
+    </div>
+    <br />
+
+    <div>
+        <label form="Nome: ">Nome: </label>
+    </div>
+    <div>
+        <input type="text" value="" name="Nome" />
+    </div>
+    <br />
+
+    <div>
+        <label form="Obs">Obs: </label>
+    </div>
+    <div>
+        <input type="text" value="" name="Obs" />
+    </div>
+    <br />
+
+    <div>
+        <label form="Nasc">Nascimento: </label>
+    </div>
+    <div>
+        <input type="date" value="" name="Nasc" />
+    </div>
+    <br />
+
+    <div>
+        <label form="Email">E-mail: </label>
+    </div>
+    <div>
+        <input type="text" value="" name="Email" />
+    </div>
+    <br />
+
+    <div>
+        <label form="Login">Login: </label>
+    </div>
+    <div>
+        <input type="text" value="" name="Login" />
+    </div>
+    <br />
+
+    <div>
+        <label form="Senha">Senha: </label>
+    </div>
+    <div>
+        <input type="password" value="" name="Senha" />
+    </div>
+    <br />
+
+    <div>
+        <label form="ConfirmaSenha">Confirmar Senha: </label>
+    </div>
+    <div>
+        <input type="password" value="" name="ConfirmaSenha" />
+    </div>
+    <br />
+    
+    <div>
+        <input type="submit" value="Enviar" />
+    </div>
+
+</fieldset>
 }

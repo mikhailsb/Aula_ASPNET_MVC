@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using QuintaApp.Models;
 
 namespace QuintaApp.Controllers
 {
@@ -11,12 +12,14 @@ namespace QuintaApp.Controllers
         // GET: Usuario
         public ActionResult Index()
         {
-            return View();
+            Usuario usuario = new Usuario();
+
+            return View(usuario);
         }
 
-        public ActionResult Resultado()
+        public ActionResult Resultado(Usuario usuario)
         {
-            return View();
+            return View(usuario);
         }
     }
 }
