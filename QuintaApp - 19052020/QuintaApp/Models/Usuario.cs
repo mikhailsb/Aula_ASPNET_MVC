@@ -20,9 +20,17 @@ namespace QuintaApp.Models
         [Required(ErrorMessage ="Informe a data de nascimento!")]
         [DisplayFormat(DataFormatString ="0:dd/MM/yyyy", ApplyFormatInEditMode =true)]
         public DateTime Nasc { get; set; }
+
+        [RegularExpression(@"^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*\s+<(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})>$|^(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})$", ErrorMessage = "Informe um e-mail válido")]
         public string Email { get; set; }
+
+        [RegularExpression(@"[a-zA-Z]{5,15}", ErrorMessage ="Somente letras, no mínimo 5 e máximo 15.")]
+        [Required(ErrorMessage ="Campo Obrigarório")]
         public string Login { get; set; }
+
+        [Required(ErrorMessage = "Senha obrigarório")]
         public string Senha { get; set; }
+        [Compare("Senha", ErrorMessage = "Senhas incompativeis")]
         public string ConfirmaSenha { get; set; }
     }
 }
