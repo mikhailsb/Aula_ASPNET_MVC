@@ -1,0 +1,75 @@
+﻿@model QuintaApp.Models.Usuario
+
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Resultado</h2>
+
+<fieldset>
+    <legend>Dados do Usuário: </legend>
+    <div>
+        <b>Id Usuário:</b>
+    </div>
+    <div>
+        @Model.UsuId
+    </div>
+    <br />
+
+    <div>
+        <b>Nome:</b>
+    </div>
+    <div>
+        @Model.Nome
+    </div>
+    <br />
+
+    <div>
+        <b>Obs:</b>
+    </div>
+    <div>
+        @Model.Obs
+    </div>
+    <br />
+
+    <div>
+        <b>Nascimento:</b>
+    </div>
+    <div>
+        @Model.Nasc
+    </div>
+    <br />
+
+    <div>
+        <b>E-mail:</b>
+    </div>
+    <div>
+        @Model.Email
+    </div>
+    <br />
+
+    <div>
+        <b>Telefone:</b>
+    </div>
+    <div>
+        @Model.Login
+    </div>
+    <br />
+
+    <div>
+        <b>Senha:</b>
+    </div>
+    <div>
+        @Model.Senha
+    </div>
+    <br />
+
+    <div>
+        <b>Confirmar Senha:</b>
+    </div>
+    <div>
+        @Model.ConfirmaSenha
+    </div>
+    <br />
+</fieldset>
+
