@@ -10,7 +10,8 @@ namespace QuintaApp.Models
 {
     public class Usuario
     {
-        [Range(0,255, ErrorMessage ="O Id deve estar entre 1 e 255.")]
+        [Display(Name ="ID do Usuário: ")]
+        [Range(1,200, ErrorMessage ="O Id deve estar entre 1 e 255.")]
         public ushort UsuId { get; set; }
 
         [Display(Name = "Nome do Usuaário: ")]

@@ -13,6 +13,16 @@
     <legend>Dados de Usuário</legend>
 
     <div class="editor-label">
+        @Html.LabelFor(m => m.UsuId)
+    </div>
+
+    <div class="editor-field">
+        @Html.EditorFor(m => m.UsuId)
+        @Html.ValidationMessageFor(m => m.UsuId)
+    </div>
+    <br />
+
+    <div class="editor-label">
         @Html.LabelFor(m => m.Nome)
     </div>
 
