@@ -1,0 +1,15 @@
+﻿@model AppRoute66.Models.Noticia
+
+@{
+    ViewBag.Title = "Mostrar Noticia";
+}
+
+<h2>@Model.Titulo</h2>
+<br />
+<em>
+    @Model.Data - @Html.ActionLink(@Model.Categoria, "MostrarCategoria", "Home", new {
+                 @categoria = Model.Categoria}, null)
+</em>
+
+<br /><br />
+<div>@Model.Conteudo</div>
